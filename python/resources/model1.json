@@ -1,0 +1,22 @@
+{
+  "Model params" :
+  {
+    "n_channels" : "dimensionality of the original feature space",
+    "depth" : "depth of the encoder and the decoder of VAE",
+    "z_dim" : "dimensionality of the latent space",
+    "n_hid_first" : "number of neurons at the first hidden layer",
+    "lam" : "koeficient before kl regularizer at VAE loss function",
+    "L" : "number of samples from the latent space to compute output values "
+  },
+
+  "Training" :
+  {
+    "batch_size" : 256,
+    "num_epochs" : 256,
+    "learning_rate" : 0.001
+  },
+
+  "Selected_model_epoch" : "model weights are saved after each epoch, for novelty detection you should specify, which checkpoint to use",
+  "Model_path": "path to save trained model"
+
+}
