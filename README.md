@@ -14,6 +14,21 @@ Distance- and density-based methods are implemented in matlab. Other methods are
 
 # Usage:
 To use one of the proposed novelty detection methods with your data you should:
-1. implement methods in model/Data.py
+1. implement data loading methods in model/Data.py
 2. train a model on your data
-3. run one of the proposed methods (for matlab methods, data should be saved in 'mat' format first)
+3. run one of the proposed methods:
+```python
+# test_data = ...
+nd = NoveltyDetection(1)
+res = nd.compute_fast_novelty_scores(test_data)
+# ...
+```
+for matlab methods, data should be saved in 'mat' format first:
+```python
+# normal_data = ..., test_data = ...
+nd = NoveltyDetection(1)
+latent_normal_data = nd.encode(normal_data)
+latent_test_data = nd.encode(test_data)
+nd.save_to_mat(latent_normal_data, "normal_data_path")
+nd.save_to_mat(latent_test_data, "test_data_path")
+```
