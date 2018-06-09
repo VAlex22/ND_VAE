@@ -20,7 +20,7 @@ class NoveltyDetection:
 
     def load_model(self, L, input_var):
         """
-        :param L: number of samples from latent space to reconstruct from
+        :param L: number of samples from latent space to decode the distributions in the original feature space from
         :return: outputs of the vae
         """
         self.n_channels, depth, self.z_dim, n_hid_first, self.lam, _ = get_model_params(self.model)
@@ -144,7 +144,7 @@ def sample_from_normal(mean, log_sigma):
 def main():
     # Example of usage
     # test_data = ...
-    nd = NoveltyDetection(1)
+    nd = NoveltyDetection(model=1)
     res = nd.compute_fast_novelty_scores(test_data)
     # ...
 
