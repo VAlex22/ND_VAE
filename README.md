@@ -1,5 +1,5 @@
 # q-Space Novelty Detection with Variational Autoencoders
-This repository contains the official implementation for the paper [q-Space Novelty Detection with Variational Autoencoders]().
+This repository contains the official implementation for the paper [q-Space Novelty Detection with Variational Autoencoders](https://arxiv.org/abs/1806.02997).
 
 # Dependencies:
 * python 3
